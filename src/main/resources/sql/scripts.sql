@@ -7,3 +7,14 @@ INSERT INTO users VALUES ('user', '{noop}Ganaya@0000', '1');
 INSERT INTO authorities VALUES ('user', 'read');
 INSERT INTO users VALUES ('admin', '{bcrypt}$2a$12$w1Oo1pE.mQXKv4GW3yUhte2BGbustlmOJ7h6O8hurP7RwFpE3dgzK', '1');
 INSERT INTO authorities VALUES ('admin', 'admin');
+
+CREATE TABLE customer (
+id int NOT NULL AUTO_INCREMENT,
+email varchar(45) NOT NULL,
+pwd varchar(200) NOT NULL,
+role varchar(45) NOT NULL,
+PRIMARY KEY(id)
+);
+
+INSERT INTO customer (email, pwd, role) VALUES ('test@gmail.com', '{noop}Ganaya@0000', 'read');
+INSERT INTO customer (email, pwd, role) VALUES ('admin@gmail.com', '{bcrypt}$2a$12$w1Oo1pE.mQXKv4GW3yUhte2BGbustlmOJ7h6O8hurP7RwFpE3dgzK', 'admin');
